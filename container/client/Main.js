@@ -35,8 +35,8 @@ export default function Projects(props) {
     const [data, setData] = useState(null)
     useEffect(() => {
         if (data != null) {
-            obtenerPlanPagos(data.client.dni, setPaymentsData)
-            obtenerReservacionesOnlyData(data.client.dni, setReservationData, mostrarNotificacion, setLoading)
+            obtenerPlanPagos(data.client.cedula, setPaymentsData)
+            obtenerReservacionesOnlyData(data.client.cedula, setReservationData, mostrarNotificacion, setLoading)
         }
     }, [data])
     console.log("DATA")
@@ -151,7 +151,7 @@ export default function Projects(props) {
                                 
                                 setCreditoFinanzas({credito:null,cobranza:null})
                                 if(itemValue!=""){
-                                    obtenerCreditoFinanzas(itemValue,data.client.dni,setCreditoFinanzas)
+                                    obtenerCreditoFinanzas(itemValue,data.client.cedula,setCreditoFinanzas)
                                 }else{
                                     setDataManagerCobranza(null)
                                     setDataManagerCredito(null)
@@ -215,7 +215,7 @@ export default function Projects(props) {
                             dataManagerCredito != null ?
                                         <View style={{ flexDirection: 'row', justifyContent: 'center', width: '100%', marginTop: 10 }}>
                                             <View style={{ marginRight: 10, height: 70, width: 70, justifyContent: 'center', alignItems: 'center', borderRadius: 50, borderColor: '#204089', borderStyle: 'solid', borderWidth: 0.5 }}>
-                                                <Image style={{ borderRadius: 60, height: 60, width: 60, resizeMode: 'contain' }} source={{ uri: 'http://api.ambiensa.info/storage/assesor_storage/' + dataManagerCredito.dni + '-profile.png' }} />
+                                                <Image style={{ borderRadius: 60, height: 60, width: 60, resizeMode: 'contain' }} source={{ uri: 'http://192.168.10.17:89/storage/assesor_storage/' + dataManagerCredito.dni + '-profile.png' }} />
                                             </View>
 
 
@@ -261,7 +261,7 @@ export default function Projects(props) {
                             dataManagerCobranza != null ?
                                         <View style={{ flexDirection: 'row', justifyContent: 'center', width: '100%', marginTop: 10 }}>
                                             <View style={{ marginRight: 10, height: 70, width: 70, justifyContent: 'center', alignItems: 'center', borderRadius: 50, borderColor: '#204089', borderStyle: 'solid', borderWidth: 0.5 }}>
-                                                <Image style={{ borderRadius: 60, height: 60, width: 60, resizeMode: 'contain' }} source={{ uri: 'http://api.ambiensa.info/storage/assesor_storage/' + dataManagerCobranza.dni + '-profile.png' }} />
+                                                <Image style={{ borderRadius: 60, height: 60, width: 60, resizeMode: 'contain' }} source={{ uri: 'http://192.168.10.17:89/storage/assesor_storage/' + dataManagerCobranza.dni + '-profile.png' }} />
                                             </View>
 
 

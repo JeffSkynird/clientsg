@@ -9,7 +9,7 @@ const windowHeight = Dimensions.get('window').height;
 export default function Activities({ navigation, route }) {
     const { dni } = route.params;
     const [tab,setTab] = useState(0)
- 
+ console.log("Entro")
     return (
         <View style={{ paddingTop: Constants.statusBarHeight, flex: 1, height: windowHeight, width: '100%', resizeMode: "cover", }}>
                 <Header />

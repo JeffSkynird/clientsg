@@ -15,7 +15,7 @@ export default function Header(props) {
              style={{flexDirection:'row',justifyContent: 'center',alignItems:'center'}}
           >
               <View style={{marginTop:5,width:110,marginRight:5}}>
-              <Text style={{textAlign:'right', color: '#1D397A',fontSize: 12.5, }}>{data.client.names+" "+data.client.last_names} </Text>
+              <Text style={{textAlign:'right', color: '#1D397A',fontSize: 12.5, }}>{data.client.nombres+" "+data.client.apellidos} </Text>
               <TouchableOpacity onPress={()=>props.navigation.navigate('EditAccount',{client_id:data.client.id})}>
               <Text style={{textAlign:'right',fontSize: 12.5,fontWeight:'bold',color:'#1D397A'}}><Feather name="edit" size={14} color="#1D397A" /> Editar datos</Text>
 

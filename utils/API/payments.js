@@ -96,7 +96,8 @@ console.log(dni)
                 console.log(response)
                 let client = response.data.client;
                 let reservations=response.data.reservations;
-                setData(reservations)
+                console.log(dni)
+                setData(reservations!=null?reservations:[])
                 setLoading(false)
       
             } else {

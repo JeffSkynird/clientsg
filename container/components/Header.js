@@ -17,7 +17,7 @@ export default function Header(props) {
              style={{flexDirection:'row',justifyContent: 'center',alignItems:'center'}}
           >
               <View style={{width:110,marginTop:2}}>
-              <Text style={{textAlign:'center', color: '#1D397A',fontSize: 12.5, }}>{prospect.client.names+" "+prospect.client.last_names} </Text>
+              <Text style={{textAlign:'center', color: '#1D397A',fontSize: 12.5, }}>{prospect.client.nombres+" "+prospect.client.apellidos} </Text>
               </View>
               
              

@@ -111,7 +111,7 @@ export default function Projects({ navigation, route }) {
                             dataManagerCredito != null ?
                                         <View style={{ flexDirection: 'row', justifyContent: 'center', width: '100%', marginTop: 10 }}>
                                             <View style={{ marginRight: 10, height: 70, width: 70, justifyContent: 'center', alignItems: 'center', borderRadius: 50, borderColor: '#204089', borderStyle: 'solid', borderWidth: 0.5 }}>
-                                                <Image style={{ borderRadius: 60, height: 60, width: 60, resizeMode: 'contain' }} source={{ uri: 'http://api.ambiensa.info/storage/assesor_storage/' + dataManagerCredito.dni + '-profile.png' }} />
+                                                <Image style={{ borderRadius: 60, height: 60, width: 60, resizeMode: 'contain' }} source={{ uri: 'http://192.168.10.17:88/storage/assesor_storage/' + dataManagerCredito.dni + '-profile.png' }} />
                                             </View>
 
 
@@ -157,7 +157,7 @@ export default function Projects({ navigation, route }) {
                             dataManagerCobranza != null ?
                                         <View style={{ flexDirection: 'row', justifyContent: 'center', width: '100%', marginTop: 10 }}>
                                             <View style={{ marginRight: 10, height: 70, width: 70, justifyContent: 'center', alignItems: 'center', borderRadius: 50, borderColor: '#204089', borderStyle: 'solid', borderWidth: 0.5 }}>
-                                                <Image style={{ borderRadius: 60, height: 60, width: 60, resizeMode: 'contain' }} source={{ uri: 'http://api.ambiensa.info/storage/assesor_storage/' + dataManagerCobranza.dni + '-profile.png' }} />
+                                                <Image style={{ borderRadius: 60, height: 60, width: 60, resizeMode: 'contain' }} source={{ uri: 'http://192.168.10.17:88/storage/assesor_storage/' + dataManagerCobranza.dni + '-profile.png' }} />
                                             </View>
 
 

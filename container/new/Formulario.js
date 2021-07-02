@@ -23,7 +23,7 @@ export default function Amenities({ navigation, route }) {
             <WebView  scalesPageToFit={false}  domStorageEnabled={true}
                 decelerationRate="normal"  style={{ height:height,width:width,resizeMode: 'cover', flex: 1 }}
                 injectedJavaScript={`const meta = document.createElement('meta'); meta.setAttribute('content', 'width=width, initial-scale=0.5, maximum-scale=0.5, user-scalable=2.0'); meta.setAttribute('name', 'viewport'); document.getElementsByTagName('head')[0].appendChild(meta); `}
-                startInLoadingState={true} automaticallyAdjustContentInsets={false} javaScriptEnabled={true} source={{ uri:'https://planmicasamifuturo.ambiensa.info/formulario'}} />
+                startInLoadingState={true} automaticallyAdjustContentInsets={false} javaScriptEnabled={true} source={{ uri:'http://192.168.10.17:89/formulario'}} />
             
         </View>
     )

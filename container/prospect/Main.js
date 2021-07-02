@@ -23,7 +23,7 @@ export default function Projects({ navigation, route }) {
     }, [])
     useEffect(()=>{
         if(data!=null){
-            setStatus(data.client.position)
+            setStatus(data.client.color)
         }
     },[data])
     const retornarPuntos = () => {
@@ -53,11 +53,11 @@ export default function Projects({ navigation, route }) {
         return text
     }
     const generarUrl=()=>{
-       let url="https://planmicasamifuturo.ambiensa.info/formulario"
+       let url="http://192.168.10.17:89/formulario"
         if(status=="Paso 1"){
-            url = 'https://planmicasamifuturo.ambiensa.info/formulario?step=2&client_id='+id
+            url = 'http://192.168.10.17:89/formulario?step=2&client_id='+id
         }else if(status=="Paso 2"){
-            url = 'https://planmicasamifuturo.ambiensa.info/formulario?step=3&client_id='+id
+            url = 'http://192.168.10.17:89/formulario?step=3&client_id='+id
         }
         return url
     }
@@ -136,7 +136,7 @@ null
                         status!="Paso 1"&&status!="Paso 2"?
                         <TouchableOpacity
                         style={{marginTop:10}}
-                              onPress={() => navigation.navigate('FormularioDinamico', { url: 'https://planmicasamifuturo.ambiensa.info/formulario?step=1&client_id='+id })}
+                              onPress={() => navigation.navigate('FormularioDinamico', { url: 'http://192.168.10.17:89/formulario?step=1&client_id='+id })}
                           >
                               <Text style={{ color: '#4FA8D6', textAlign: 'center' }}><Feather name="edit" size={18} color="#4FA8D6" /> Actualizar / Editar formulario</Text>
                           </TouchableOpacity>
@@ -158,17 +158,17 @@ null
                           initializer.prospect.asesor!=null?
                         <View style={{ flexDirection: 'row', width: '100%' }}>
                             <View style={{ marginRight: 10, height: 70, width: 70, justifyContent: 'center', alignItems: 'center', borderRadius: 50, borderColor: '#204089', borderStyle: 'solid', borderWidth: 0.5 }}>
-                                <Image style={{ borderRadius: 60, height: 60, width: 60, resizeMode: 'contain' }} source={{uri:'http://api.ambiensa.info/storage/assesor_storage/'+initializer.prospect.asesor.dni+'-profile.png'}} />
+                                <Image style={{ borderRadius: 60, height: 60, width: 60, resizeMode: 'contain' }} source={{uri:'http://192.168.10.17:89/storage/assesor_storage/'+initializer.prospect.asesor.dni+'-profile.png'}} />
                             </View>
 
 
                             <View style={{ width: '71%' }}>
-                                <Text style={{ fontSize: 16, marginBottom: 5, color: 'gray', }}>{initializer.prospect.asesor.names} {initializer.prospect.asesor.last_names}</Text>
+                                <Text style={{ fontSize: 16, marginBottom: 5, color: 'gray', }}>{initializer.prospect.asesor.nombres} {initializer.prospect.asesor.apellidos}</Text>
 
                                 <View style={{ flexDirection: 'row', width: '100%', alignItems: 'baseline', }}>
                                     <TouchableOpacity
                                         style={{ flexDirection: 'row', width: 55, marginRight: 35, marginBottom: 5, }}
-                                        onPress={() =>           Linking.openURL(`tel:${initializer.prospect.asesor.cellphone}`)}
+                                        onPress={() =>           Linking.openURL(`tel:${initializer.prospect.asesor.celular}`)}
                                     >
                                         <View style={{ marginRight: 5, justifyContent: 'center', alignItems: 'center', backgroundColor: '#204089', borderRadius: 5, height: 24, width: 24 }}>
                                             <Feather name="phone-call" size={16} color="white" />
@@ -179,7 +179,7 @@ null
                                     </TouchableOpacity>
                                     <TouchableOpacity
                                         style={{ flexDirection: 'row', width: 50, marginRight: 30, marginBottom: 5, }}
-                                        onPress={() =>  Linking.openURL('mailto:'+initializer.prospect.asesor.email+'?subject=Tengo una inquietud&body=Saludos, soy '+initializer.prospect.client.names+' '+initializer.prospect.client.last_names+', por favor, ayúdeme resolviendo la siguiente inquietud ...') }
+                                        onPress={() =>  Linking.openURL('mailto:'+initializer.prospect.asesor.email+'?subject=Tengo una inquietud&body=Saludos, soy '+initializer.prospect.client.nombres+' '+initializer.prospect.client.apellidos+', por favor, ayúdeme resolviendo la siguiente inquietud ...') }
                                     >
 
 
@@ -214,7 +214,7 @@ null
                       }
                     </View>
                     <TouchableOpacity
-                        onPress={()=>navigation.navigate('Activities',{dni:initializer.prospect.client.dni})}
+                        onPress={()=>navigation.navigate('Activities',{dni:initializer.prospect.client.cedula})}
                         style={{ marginTop: 20, borderRadius: 5, borderWidth: 0.5, borderColor: '#22428B', borderStyle: 'solid', padding: 10, width: '80%' }}
                     >
                         <Text style={{ color: 'gray', textAlign: 'center' }}>Ver comunicaciones previas con ambiensa</Text>

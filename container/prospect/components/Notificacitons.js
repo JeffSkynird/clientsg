@@ -17,16 +17,16 @@ export default function Notificacitons(props) {
         let array = datos.citations.concat(datos.calls);
 
         array.sort(function(a, b) {
-            var keyA = new Date(a.created_at),
-              keyB = new Date(b.created_at);
+            var keyA = new Date(a.creado_en),
+              keyB = new Date(b.creado_en);
             // Compare the 2 dates
             if (keyA < keyB) return -1;
             if (keyA > keyB) return 1;
             return 0;
           });
           array.reverse()
-         
-
+         console.log("datos")
+console.log(datos)
         setData(array)
     }
     function convertTZ(date, tzString) {
@@ -43,14 +43,14 @@ export default function Notificacitons(props) {
         let text = "";
         if(item.hasOwnProperty('destination')){
           
-            if(item.is_effective){
-                text = "El asesor ha realizado una llamada a su celular "+item.destination
+            if(item.es_efectiva){
+                text = "El asesor ha realizado una llamada a su celular "+item.destino
             }else{
-                text = "Tiene una llamada perdida a su celular "+item.destination
+                text = "Tiene una llamada perdida a su celular "+item.destino
             }
         }else{
   
-            text = "Se ha agendado una cita para el día "+dateFormatB(new Date(item.date))+" "+getHours(new Date(item.date))
+            text = "Se ha agendado una cita para el día "+dateFormatB(new Date(item.fecha))+" "+getHours(new Date(item.fecha))
         }
       return text
     }
@@ -58,7 +58,7 @@ export default function Notificacitons(props) {
         let count = 0;
         data.map((e)=>{
             let f1 = new Date();
-            let f2 = new Date(getUTC(e.created_at));
+            let f2 = new Date(getUTC(e.creado_en));
             f1.setHours(0,0,0,0);
             f2.setHours(0,0,0,0);
          
@@ -76,7 +76,7 @@ export default function Notificacitons(props) {
     }
     const renderItem = ({ item }) => {
     let f1 = new Date();
-    let f2 = new Date(getUTC(item.created_at));
+    let f2 = new Date(getUTC(item.creado_en));
     f1.setHours(0,0,0,0);
     f2.setHours(0,0,0,0);
     let esHoy =false;
@@ -84,11 +84,12 @@ export default function Notificacitons(props) {
       
         esHoy=true
     }
+    
         return (
                     <View style={{borderBottomWidth:0.5,marginBottom:5, padding:5,borderLeftWidth:esHoy?4:0,borderLeftColor:'#FE6C02', width: '100%'}}>
                         <Text style={{ color: 'gray',  fontSize: 16,marginBottom:10 }}>{citasEfectivas(item)}</Text>
 
-                        <Text style={{ color: 'gray',  fontSize: 13 }}>{dateFormatA(getUTC(item.created_at))+" "+getHours(getUTC(item.created_at))}</Text>
+                        <Text style={{ color: 'gray',  fontSize: 13 }}>{dateFormatA(getUTC(item.creado_en))+" "+getHours(getUTC(item.creado_en))}</Text>
 
                     </View>
 
@@ -98,6 +99,7 @@ export default function Notificacitons(props) {
 
         )
     }
+    console.log("es"+data)
     return (
         <View>
            

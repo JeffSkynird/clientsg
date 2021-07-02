@@ -725,7 +725,7 @@ export const obtenerClienteAuth = (setData, store) => {
     .then((res) => {
       let response = res.data;
       if (response.type != "error") {
-  
+        console.log(response)
         setData({asesor:response.asesor_data!=null?{...response.asesor_data}:null,client:{...response.client_data,email:response.email,province:response.province},spouse:response.spouse_data});
        
       } else {
@@ -909,6 +909,7 @@ export const registrarClienteAuth = (data, store,setValidation,setHasValidation,
 };
 
 export const obtenerActivities = (dni,setData,parsingData) => {
+  console.log(dni)
   let url = ENTRYPOINT+"prospect/log?dni="+dni;
   let setting = {
     method: "GET",
@@ -926,6 +927,7 @@ export const obtenerActivities = (dni,setData,parsingData) => {
   
           setData({citations:response.data.citations,calls:response.data.calls});
           parsingData({citations:response.data.citations,calls:response.data.calls})
+        
          // toast(res.data.message,"success")
       } else {
 
@@ -933,7 +935,7 @@ export const obtenerActivities = (dni,setData,parsingData) => {
       }
     })
     .catch((error) => {
-     
+      console.log(error)
      // toast("Error de red","error")
      
     });
@@ -1588,7 +1590,7 @@ export const importar = (data,store) => {
 
 
 export const creditoHipotecario = (data, toast,setLoading) => {
-
+console.log(data)
   let url = ENTRYPOINT+"client/mortgageCredit";
   let setting = {
     method: "POST",
