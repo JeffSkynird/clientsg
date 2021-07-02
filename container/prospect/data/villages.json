@@ -1,0 +1,92 @@
+[
+    {
+        "id":1,
+        "project_id":1,
+        "nombre":"VILLA ARYANA",
+        "cuartos":3,
+        "baños":1,
+        "terreno":93.80,
+        "construccion":57.10,
+        "detalle":["Sala","Comedor","Cocina tipo americana","Estacionamiento","Baño","3 Dormitorios", "Patio","Jardín","Ramos de acceso universal"],
+        "images":["https://paseodelsol.ambiensa.com/images/slides/imp/villaaryana.jpg","https://paseodelsol.ambiensa.com/images/slides/imp/garita.jpg","https://paseodelsol.ambiensa.com/images/slides/imp/club.jpg"],
+        "ficha_tecnica":"https://paseodelsol.ambiensa.com/images/slides/imp/villaaryanaimp2.jpg"
+
+    },
+    {
+        "id":2,
+        "nombre":"VILLA ISABELLA",
+        "project_id":1,
+        "cuartos":3,
+        "baños":1,
+        "terreno":93.80,
+        "construccion":73.48,
+        "detalle":["Sala","Comedor","Cocina con ventanal al patio","Zona de lavandería","Patio posterior","Jardin delantero y parqueo"],
+        "images":["https://paseodelsol.ambiensa.com/images/slides/imp/villaisabella.jpg","https://paseodelsol.ambiensa.com/images/slides/imp/garita.jpg","https://paseodelsol.ambiensa.com/images/slides/imp/club.jpg"],
+        "ficha_tecnica":"https://paseodelsol.ambiensa.com/images/slides/imp/villaisabella2.jpg"
+
+    },
+    {
+        "id":3,
+        "nombre":"VILLA KIARA",
+        "project_id":1,
+        "cuartos":3,
+        "baños":3,
+        "terreno":93.80,
+        "construccion":89.90,
+        "detalle":["Sala","Comedor con acceso a galería posterior","Cocina con ventanal al patio","Estacionamiento","Baño","Patio","Jardín","3 Dormitorios","2 Baños"],
+        "images":["https://paseodelsol.ambiensa.com/images/slides/imp/villakiara.jpg","https://paseodelsol.ambiensa.com/images/slides/imp/garita.jpg","https://paseodelsol.ambiensa.com/images/slides/imp/club.jpg"],
+        "ficha_tecnica":"https://paseodelsol.ambiensa.com/images/slides/imp/villakiara2.jpg"
+
+    },
+    {
+        "id":4,
+        "nombre":"Geranio STD",
+        "project_id":2,
+        "cuartos":2,
+        "baños":1,
+        "terreno":93.80,
+        "construccion":50.40,
+        "detalle":["Sala","Comedor","Cocina tipo americana","Estacionamiento","Baño","2 Dormitorios", "Patio","Jardín"],
+        "images":["https://villageranio.ambiensa.com/images/slides/imp/villageranio.jpg","https://villageranio.ambiensa.com/images/slides/imp/garita.jpg","https://villageranio.ambiensa.com/images/slides/imp/picnic.jpg"],
+        "ficha_tecnica":"https://villageranio.ambiensa.com/images/slides/imp/villageranioimp.jpg"
+    },
+    {
+        "id":5,
+        "nombre":"Magnolia Plus",
+        "project_id":2,
+        "cuartos":2,
+        "baños":2,
+        "terreno":93.80,
+        "construccion":58,
+        "detalle":["Sala","Comedor amplio","Cocina abierta","1 baño","Estacionamiento","Patio","Jardin","2 Dormitorios","1 baño"],
+        "images":["https://villageranio.ambiensa.com/images/slides/imp/villamagnolia.jpg","https://villageranio.ambiensa.com/images/slides/imp/garita.jpg","https://villageranio.ambiensa.com/images/slides/imp/picnic.jpg"],
+        "ficha_tecnica":"https://villageranio.ambiensa.com/images/slides/imp/villamagnoliaplusimp.jpg"
+
+    },
+    {
+        "id":6,
+        "nombre":"Gardenia Plus",
+        "project_id":2,
+        "cuartos":3,
+        "baños":2,
+        "terreno":93.80,
+        "construccion":69.58,
+        "detalle":["Sala","Comedor amplio","Cocina abierta","1 baño","Estacionamiento","Patio","Jardín","3 Dormitorios","1 Baño"],
+        "images":["https://villageranio.ambiensa.com/images/slides/imp/villagardenia.jpg","https://villageranio.ambiensa.com/images/slides/imp/garita.jpg","https://villageranio.ambiensa.com/images/slides/imp/picnic.jpg"],
+        "ficha_tecnica":"https://villageranio.ambiensa.com/images/slides/imp/villagardeniaplusimp.jpg"
+
+    },
+    {
+        "id":7,
+        "nombre":"Violeta Plus",
+        "project_id":2,
+        "cuartos":3,
+        "baños":3,
+        "terreno":93.80,
+        "construccion":73.48,
+        "detalle":["Sala","Comedor amplio","Cocina amplia con ventana al patio","Estacionammiento","Patio","Jardín","1 Baño","3 Dormitorios","2 Baños"],
+        "images":["https://villageranio.ambiensa.com/images/slides/imp/villavioletaplus.jpg","https://villageranio.ambiensa.com/images/slides/imp/garita.jpg","https://villageranio.ambiensa.com/images/slides/imp/picnic.jpg"],
+        "ficha_tecnica":"https://villageranio.ambiensa.com/images/slides/imp/villavioletaplusRENDER.jpg"
+
+    }
+]

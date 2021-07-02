@@ -1,0 +1,12 @@
+{
+    "id":1,
+    "nombre":"VILLA ARYANA",
+    "cuartos":3,
+    "baños":1,
+    "terreno":93.80,
+    "construccion":57.10,
+    "detalle":["Sala","Comedor","Cocina tipo americana","Estacionamiento","Baño","3 Dormitorios", "Patio","Jardín","Ramos de acceso universal"],
+    "images":["https://paseodelsol.ambiensa.com/images/slides/imp/villaaryana.jpg","https://paseodelsol.ambiensa.com/images/slides/imp/garita.jpg","https://paseodelsol.ambiensa.com/images/slides/imp/club.jpg"],
+    "ficha_tecnica":"https://paseodelsol.ambiensa.com/images/slides/imp/villaaryanaimp2.jpg"
+
+}
